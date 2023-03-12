@@ -1,0 +1,41 @@
+﻿@model List<Ogrenci>
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
+
+
+<Table class="table table-striped table-hover">
+
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>İSİM</th>
+            <th>SOYİSİM</th>
+            <th>ÖĞRENCİ NO</th>
+
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.id</td>
+                <td>@item.name</td>
+                <td>@item.surname</td>
+                <td>@item.stdNumber</td>
+
+            </tr>
+
+        }
+
+
+    </tbody>
+
+
+</Table>
